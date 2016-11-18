@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="PostgreSQL - consultad_db@localhost" uuid="139ce554-49f2-4e9d-96c3-b76f415e9287">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/consultad_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - consultad_db@localhost [2]" uuid="a51f5f13-9b46-4398-9043-365376eae590">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/consultad_db</jdbc-url>
+    </data-source>
+  </component>
+</project>

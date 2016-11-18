@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - consultad_db@localhost" uuid="139ce554-49f2-4e9d-96c3-b76f415e9287">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>memory</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>consultad_admin</user-name>
+    </data-source>
+    <data-source name="PostgreSQL - consultad_db@localhost [2]" uuid="a51f5f13-9b46-4398-9043-365376eae590">
+      <database-info product="PostgreSQL" version="9.4.10" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-scope>consultad_db:public,pg_catalog,postgres</introspection-scope>
+      <resolve-scope>consultad_db:public,postgres</resolve-scope>
+    </data-source>
+  </component>
+</project>
