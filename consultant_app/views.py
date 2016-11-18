@@ -33,3 +33,11 @@ class AdminPanelViewSet(viewsets.ModelViewSet):
     # permission_classes = (IsAuthenticated,)
     queryset = Consultant.objects.all()
     serializer_class = AdminPanelSerializer
+
+
+class ConsultantViewset(viewsets.ModelViewSet):
+    queryset = Consultant.objects.filter(supporter_id=2)
+    print(queryset)
+    serializer_class = ConsultantSerializer
+    # retrieve_serializer_class=ProjectSerializer
+

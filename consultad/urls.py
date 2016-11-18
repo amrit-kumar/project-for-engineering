@@ -24,6 +24,7 @@ from rest_framework import routers
 router = DefaultRouter()
 # router.register(r'check/', views.TokenTest,'abcd')
 router.register(r'checks', views.AdminPanelViewSet)
+router.register(r'consultant',views.ConsultantViewset)
 
 
 
