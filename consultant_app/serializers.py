@@ -1,35 +1,51 @@
 from .models import *
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
+from django.core.serializers.json import Serializer as Builtin_Serializer
 
-
-class TokenSerializer(serializers.ModelSerializer):
+class USER_MODEL_SERIALIAZER(serializers.ModelSerializer):
     class Meta:
-        model=Token
+        model= UserProfile
+        # exclude = ('',)
+
+        # fields= ('username', )
+
+
+# class TokenSerialiazer(serializers.ModelSerializer):
+#     class Meta:
+#         model=Token
 
 
 class SupporterSerializer(serializers.ModelSerializer):
+    supporter= USER_MODEL_SERIALIAZER()
+
+
     class Meta:
         model= Supporter
-        fields=('user__username', 'pk')
+        fields=('pk','supporter', )
+        ordering = ('-pk',)
 
 
 class ProjectSerializer(serializers.ModelSerializer):
+
     class Meta:
         model= Project
-        fields=('user__username', 'pk')
-
+        fields=( 'pk','title',)
+        ordering = ('pk',)
 
 class AdminPanelSerializer(serializers.ModelSerializer):
-    supporter_id= SupporterSerializer()
-    project_id= ProjectSerializer()
+    supporter= SupporterSerializer()
+    project= ProjectSerializer()
+    consultant= USER_MODEL_SERIALIAZER()
     class Meta:
         model= Consultant
-        fields=('pk', 'supporter_id', 'project_id', 'user_username')
+        depth= 1
+        fields=('pk', 'consultant','project','supporter')
+        ordering = ('pk',)
 
-
-class ConsultantSerializer(serializers.ModelSerializer):
-    project_id=ProjectSerializer()
+class AdminPanelAddSupporterSerializer(serializers.ModelSerializer):
+    supporter= SupporterSerializer()
     class Meta:
-        model = Consultant
+        model= Supporter
+        fields=('supporter', 'employee_id', 'skype_username','mobile_no')
 

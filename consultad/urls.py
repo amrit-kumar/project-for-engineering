@@ -23,9 +23,11 @@ from rest_framework import routers
 
 router = DefaultRouter()
 # router.register(r'check/', views.TokenTest,'abcd')
-router.register(r'checks', views.AdminPanelViewSet)
-router.register(r'consultant',views.ConsultantViewset)
+router.register(r'admin_panel', views.AdminPanelViewSet)
+router.register(r'add_supporter', views.AdminPanelAddSupporter)
 
+# router.register(r'consultant123',views.ConsultantViewset)
+# router.register(r'consultant',views.ConsultantDetailViewset,base_name='Consultant')
 
 
 urlpatterns = [

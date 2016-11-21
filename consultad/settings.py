@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'oauth2_provider',
     'rest_auth',
+    'corsheaders',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,6 +57,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'consultad.urls'
@@ -117,15 +122,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework.authentication.TokenAuthentication',
+    #     'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    # ),
 
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-
-    ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
+# 'rest_framework.permissions.IsAdminUser'
+
     )
 }
 
@@ -165,3 +170,26 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+AUTH_USER_MODEL = 'consultant_app.UserProfile'
+#
+# REST_FRAMEWORK = {
+#    'DEFAULT_AUTHENTICATION_CLASSES': (
+#        'rest_framework.authentication.TokenAuthentication',
+#    ),
+#    'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAdminUser'
+#    ),
+# }
+
+# CORS_ALLOW_HEADERS = (
+#        'x-requested-with',
+#        'content-type',
+#        'accept',
+#        'origin',
+#        'authorization',
+#        'x-csrftoken',
+#
+#        )
