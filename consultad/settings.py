@@ -49,17 +49,29 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE_CLASSES = [
+    'django.middleware.csrf.CsrfViewMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsPostCsrfMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+
+
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-'corsheaders.middleware.CorsMiddleware',
 ]
+CORS_ORIGIN_WHITELIST = (
+    'google.com',
+    'hostname.example.com',
+    'localhost:8000',
+    '192.168.0.170:8000',
+    '127.0.0.1:9000'
+)
 
 ROOT_URLCONF = 'consultad.urls'
 
@@ -122,14 +134,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework.authentication.TokenAuthentication',
-    #     'oauth2_provider.ext.rest_framework.OAuth2Authentication',
-    # ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        # 'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    ),
 
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-# 'rest_framework.permissions.IsAdminUser'
+'rest_framework.permissions.IsAdminUser'
 
     )
 }
@@ -173,7 +185,7 @@ STATIC_URL = '/static/'
 
 
 
-AUTH_USER_MODEL = 'consultant_app.UserProfile'
+AUTH_USER_MODEL = 'consultant_app.User'
 #
 # REST_FRAMEWORK = {
 #    'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -184,12 +196,26 @@ AUTH_USER_MODEL = 'consultant_app.UserProfile'
 #    ),
 # }
 
-# CORS_ALLOW_HEADERS = (
-#        'x-requested-with',
-#        'content-type',
-#        'accept',
-#        'origin',
-#        'authorization',
-#        'x-csrftoken',
-#
-#        )
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+)
+CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ALLOW_CREDENTIALS = True
