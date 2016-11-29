@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - consultad_db@localhost" uuid="8ebddab8-29f3-430c-abb2-0fd2731b64f9">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-scope>consultad_db:pg_catalog,postgres,public</introspection-scope>
+      <resolve-scope>consultad_db:postgres,public</resolve-scope>
+    </data-source>
+  </component>
+</project>
