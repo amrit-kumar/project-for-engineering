@@ -39,16 +39,15 @@ class User(AbstractUser):
     )
     gender= models.CharField(choices=GENDER, max_length=10, null=True, blank=True)
     role= models.CharField(choices=ROLE_CHOICE, max_length=15, null=True, blank=True)
-    employee_id = models.CharField(max_length=20, default=None, null=True)
-    skype_username = models.CharField(max_length=50, default=None, null=True)
-    mobile_no = models.CharField(max_length=10, null=True, blank=True, )
-    company_name = models.CharField(max_length=50, default=None, null=True)
-    experience = models.CharField(max_length=5, default=None, null=True)
+    employee_id = models.CharField(max_length=20, default=None, null=True, blank=True)
+    skype_username = models.CharField(max_length=50, default=None, null=True, blank=True)
+    mobile_no = models.CharField(max_length=10, null=True, blank=True )
+    company_name = models.CharField(max_length=50, default=None, null=True, blank=True)
+    experience = models.CharField(max_length=5, default=None, null=True, blank=True)
     status = models.CharField(choices=RATING_CHOICES, max_length=15, null=True, blank=True)
-
-    current_location = models.CharField(max_length=30, default=None, null=True)
-    resume= models.FileField( upload_to=get_attachment_file_path, default=None, null=True)
-
+    assigned_date= models.DateField(null=True, blank=True, )
+    current_location = models.CharField(max_length=30, default=None, null=True, blank=True)
+    resume= models.FileField( upload_to=get_attachment_file_path, default=None, null=True, blank=True)
     supporter = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='consultant')
 
     def __str__(self):
@@ -71,12 +70,30 @@ class Project(models.Model):
 
 
 class Comment(models.Model):
-    text=models.TextField(max_length=1000, blank=True, null=True)
-    comment_time= models.DateTimeField(default=datetime.now)
-    project= models.ForeignKey(Project, null=True, blank=True)
-    supporter= models.ForeignKey(User, null=True, blank=True)
+    content=models.TextField(max_length=1000, blank=True, null=True)
+    comment_time= models.DateTimeField( blank=True, auto_now_add=True,null= True)
+    project= models.ForeignKey(Project, null=True, blank=True, on_delete=models.CASCADE, related_name='comment')
+    supporter= models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name='comment')
+    reply= models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='comment')
+    read_unread= models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
+
+class To_do_list(models.Model):
+    content=models.TextField(null=True, blank=True)
+    to_do_list_time= models.DateTimeField( blank=True, auto_now_add=True,null= True)
+    user= models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name='to_do_list')
+    check= models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.text
+
+class Notification(models.Model):
+    read_unread= models.BooleanField(default=False)
+    content= models.TextField(null=True, blank=True)
+    notification_time= models.DateTimeField(null= True,blank=True, auto_now_add=True)
+    user= models.ForeignKey(User,null=True, blank=True, on_delete=models.CASCADE, related_name='notification')
+
 
 
