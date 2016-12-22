@@ -89,7 +89,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'consultad.wsgi.application'
 
+PROJECT_DIR  = os.path.dirname(__file__)
 
+MEDIA_ROOT = os.path.join(PROJECT_DIR,'media')
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(PROJECT_DIR,'static')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_DIR, 'staticfiles'),
+)
 
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "none"
@@ -179,10 +188,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 REST_FRAMEWORK = {
 
-
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
         # 'oauth2_provider.ext.rest_framework.OAuth2Authentication',

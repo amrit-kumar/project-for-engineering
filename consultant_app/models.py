@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.db import models
 from django.conf import settings
 from datetime import datetime
@@ -6,6 +7,7 @@ import uuid
 from django.contrib.auth.models import PermissionsMixin
 from django import forms
 from django.utils import timezone
+
 
 
 def get_attachment_file_path(instance, filename):
@@ -78,7 +80,8 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-
+    # def __unicode__(self):
+    #    return unicode(self.some_field) or u''
 class Comment(models.Model):
     text=models.TextField(max_length=1000, blank=True, null=True)
     comment_time= models.DateTimeField(default=datetime.now)

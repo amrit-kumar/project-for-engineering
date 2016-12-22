@@ -17,6 +17,7 @@ from django.conf.urls import url,include
 from rest_framework import routers
 from django.contrib import admin
 from consultant_app.views import *
+from django.conf.urls.static import static
 from rest_framework.authtoken import views
 from django.views.decorators.csrf import csrf_exempt
 
@@ -50,4 +51,4 @@ urlpatterns = [
     url(r'all_auth/', include('allauth.urls')),
     url(r'^', include('django.contrib.auth.urls')),
 
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

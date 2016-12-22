@@ -64,13 +64,16 @@ def send_update(sender, **kwargs):
     if obj.role == 'consultant':
         recipient = obj.supporter
         admin=User.objects.get(is_superuser=True)
-        Notification.objects.create(
-            recipient=recipient,
-            type="assigned_consultant",
-            send_by=admin,
-            text="You have been assigned a new consultant %s" % obj.username
-        )
-        return None
+        if recipient is not None:
+            Notification.objects.create(
+                recipient=recipient,
+                type="assigned_consultant",
+                send_by=admin,
+                text="You have been assigned a new consultant %s" % obj.username
+            )
+            return None
+        else:
+            return None
     try:
         abc= get_object_or_404(Token,user=obj)
         return None

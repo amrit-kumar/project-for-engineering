@@ -14,7 +14,21 @@ from django.shortcuts import redirect
 from rest_framework import filters
 from django.contrib.auth.hashers import make_password
 from django.http import Http404
-from django.contrib.contenttypes.models import ContentType
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from rest_framework.pagination import PageNumberPagination
+from rest_framework import permissions
+
+class UserPermissionsObj(permissions.BasePermission):
+
+    def has_object_permission(self, request, view, obj):
+        if request.user.is_staff:
+            return True
+
+        return obj == request.user
+class LargeResultsSetPagination(PageNumberPagination):
+    page_size = 10
+    page_size_query_param = 'page_size'
+    max_page_size = 10000
 
 # class AdminPanelViewSet(viewsets.ReadOnlyModelViewSet):
 #     authentication_classes = (TokenAuthentication,)
@@ -74,7 +88,9 @@ class SupporterPanelViewSet(viewsets.ReadOnlyModelViewSet):
                 return Response("User Is Admin So Cannot Be Deleted", status=status.HTTP_406_NOT_ACCEPTABLE)
             else:
                 user.delete()
-                return Response("user  deleted", status=status.HTTP_200_OK)
+                data=User.objects.all()
+                serializers=SupporterDetailSerializer(data,many=True)
+                return Response(serializers.data, status=status.HTTP_200_OK)
         except User.DoesNotExist:
             raise Http404("No User matches the given query.")
 
@@ -175,6 +191,7 @@ class SupporterDetailViewset(viewsets.ModelViewSet):
     # permission_classes = (IsAuthenticated,)
     queryset = User.objects.filter(role='supporter')
     serializer_class = SupporterDetailSerializer
+    permission_classes=(UserPermissionsObj,)
     filter_backends = (filters.DjangoFilterBackend, filters.SearchFilter)
     search_fields = ('first_name',)
     filter_fields = ('first_name',)
@@ -198,7 +215,6 @@ class SupporterDetailViewset(viewsets.ModelViewSet):
             data = SkillSet.objects.filter(supporter_id=request.user.id)
             serializers = SkillSetSerializer(data, many=True)
             return Response(serializers.data, status=status.HTTP_200_OK)
-
         except SkillSet.DoesNotExist:
             raise Http404("No to_do_list matches the given query.")
 
@@ -268,8 +284,10 @@ class GetActiveViewSet(viewsets.ModelViewSet):
 #         return Response(serializer.data)
 
 class CommentViewSet(viewsets.ModelViewSet):
+
     queryset = Comment.objects.filter(id=0)
     serializer_class = CommentSerializer
+    # pagination_class = LargeResultsSetPagination
 
     # def create(self, request):
     #     serializers = CommentDetailSerializer(data=request.data)
@@ -286,22 +304,32 @@ class CommentViewSet(viewsets.ModelViewSet):
 class NotificationViewSet(viewsets.ModelViewSet):
     queryset = Notification.objects.all().order_by('-timestamp')
     serializer_class = NotificationSerializer
+    pagination_class = LargeResultsSetPagination
+
 
     def list(self,request):
         data=Notification.objects.all().order_by('-timestamp')
-        serializers=NotificationSerializer(data,many=True)
+        page = self.paginate_queryset(data)
+
+        serializers=NotificationSerializer(page,many=True)
         return Response(serializers.data)
 
-    @detail_route(methods=['GET','POST'])
-    def get_notify(self,request,pk=None):
-        data=Notification.objects.filter(recipient__id=pk).order_by('-timestamp')
-        serializers=NotificationDetailSerializer(data, many=True)
+    def retrieve(self, request, pk=None):
+        data = Notification.objects.filter(recipient__id=pk).order_by('-timestamp')
+        page = self.paginate_queryset(data)
+        serializers = NotificationDetailSerializer(page, many=True)
         return Response(serializers.data)
+    #
+    # @detail_route(methods=['GET','POST'])
+    # def get_notify(self,request,pk=None):
+    #     data=Notification.objects.filter(recipient__id=pk).order_by('-timestamp')
+    #     page = self.paginate_queryset(data)
+        # serializers=NotificationDetailSerializer(page, many=True)
+        # return Response(serializers.data)
 
 class TechnologyViewSet(viewsets.ModelViewSet):
-    queryset = Technology.objects.all()
+    queryset = Technology.objects.all().order_by('technology')
     serializer_class = TechnologySerializer
-
 
 class To_do_listViewSet(viewsets.ModelViewSet):
     queryset= To_do_list.objects.all()
