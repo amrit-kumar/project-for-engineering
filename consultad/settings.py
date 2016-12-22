@@ -36,7 +36,13 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'oauth2_provider',
     'rest_auth',
+    'rest_auth.registration',
     'corsheaders',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,11 +50,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'rest_auth.registration',
+
+    'django_filters',
+    'crispy_forms',
+    'liked',
+
+    # 'push_notifications',
+
 ]
+SITE_ID = 1
 
 
 
@@ -56,7 +66,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.csrf.CsrfViewMiddleware',
 
     'corsheaders.middleware.CorsMiddleware',
-    'corsheaders.middleware.CorsPostCsrfMiddleware',
+    # 'corsheaders.middleware.CorsPostCsrfMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,11 +80,11 @@ MIDDLEWARE_CLASSES = [
 
 ]
 CORS_ORIGIN_WHITELIST = (
-    'google.com',
-    'hostname.example.com',
+    # 'google.com',
+    # 'hostname.example.com',
     'localhost:8000',
     '192.168.0.170:8000',
-    '127.0.0.1:9000'
+    # '127.0.0.1:9000'
 )
 
 ROOT_URLCONF = 'consultad.urls'
@@ -90,6 +100,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+
             ],
         },
     },
@@ -133,22 +145,42 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
+
+ACCOUNT_AUTHENTICATION_METHOD = "username"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+AUTH_USER_MODEL = 'consultant_app.User'
+# LOGIN_REDIRECT_URL = "users:redirect"
+# LOGIN_URL = "account_login"
 
 
 
 REST_FRAMEWORK = {
+# 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE': 1000
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
+
+        # 'rest_framework.authentication.BasicAuthentication'
         # 'oauth2_provider.ext.rest_framework.OAuth2Authentication',
     ),
 
     # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAdminUser',
     #     'rest_framework.permissions.IsAuthenticated',
-# 'rest_framework.permissions.IsAdminUser'
-#
-#     )
-    }
+    # ),
+
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    )
+
+}
 
 
 
@@ -181,8 +213,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-SITE_ID = 1
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -191,37 +221,37 @@ STATIC_URL = '/static/'
 
 
 
-AUTH_USER_MODEL = 'consultant_app.User'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'utkarshsharma.tixdo@gmail.com'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = 'abcde@12345'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT = 587
+
 #
-# REST_FRAMEWORK = {
-#    'DEFAULT_AUTHENTICATION_CLASSES': (
-#        'rest_framework.authentication.TokenAuthentication',
-#    ),
-#    'DEFAULT_PERMISSION_CLASSES': (
-#         'rest_framework.permissions.IsAdminUser'
-#    ),
-# }
-
-CORS_ALLOW_METHODS = (
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-)
-
-CORS_ALLOW_HEADERS = (
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-)
+# CORS_ALLOW_METHODS = (
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# )
+#
+# CORS_ALLOW_HEADERS = (
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'dnt',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+# )
 CORS_ORIGIN_ALLOW_ALL = True
-
+# CSRF_COOKIE_DOMAIN=None
 # CORS_ALLOW_CREDENTIALS = True
+LOGOUT_ON_PASSWORD_CHANGE = False

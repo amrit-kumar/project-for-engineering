@@ -2,42 +2,36 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/consultant_app/views.py" line="5" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="43" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="45" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="25" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="44" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="52" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="55" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="34" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="53" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="60" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6579f5f1-0dea-4fe4-a53d-053ef9e43c6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/6450e0c6-37e5-4a90-a9e1-f3f41c1d6b34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/9e78a1ce-4b7b-40be-a8c9-650a1e2780b2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/c5f3cf10-7019-411a-b0e1-3edac2b3075d.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/e24a41e6-f33e-4d64-b1c6-f2352aa2f017.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/40580df3-9b9b-4c11-aee4-2c878f1571a6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/41916556-cf56-46c8-8a42-db0dc4414494.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/d03cbf01-8cc6-450a-a830-2e6545c5e9be.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consultant_app/migrations/0002_user_gender.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consultant_app/migrations/0003_auto_20161122_1157.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0002_auto_20161116_1406.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0003_auto_20161117_0534.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0004_auto_20161117_0743.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0005_auto_20161117_1258.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0006_auto_20161117_1300.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+    <list default="true" id="6af58d85-b344-4cad-8c4a-374113726a29" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/a8c4f4c3-666c-4429-97c5-362e1cdedc77.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/41916556-cf56-46c8-8a42-db0dc4414494.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/d03cbf01-8cc6-450a-a830-2e6545c5e9be.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0002_user_gender.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0003_auto_20161122_1157.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/0004_auto_20161125_0922.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/consultant_app/migrations/__init__.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/consultad.iml" afterPath="$PROJECT_DIR$/.idea/consultad.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultad/settings.py" afterPath="$PROJECT_DIR$/consultad/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultad/urls.py" afterPath="$PROJECT_DIR$/consultad/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/__init__.py" afterPath="$PROJECT_DIR$/consultant_app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/admin.py" afterPath="$PROJECT_DIR$/consultant_app/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/apps.py" afterPath="$PROJECT_DIR$/consultant_app/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/consultant_app/migrations/0001_initial.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/models.py" afterPath="$PROJECT_DIR$/consultant_app/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/serializers.py" afterPath="$PROJECT_DIR$/consultant_app/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/tests.py" afterPath="$PROJECT_DIR$/consultant_app/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/views.py" afterPath="$PROJECT_DIR$/consultant_app/views.py" />
     </list>
     <ignored path="consultad.iws" />
@@ -60,16 +54,6 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - consultad_db@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -83,34 +67,34 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consultant_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="-1786">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consultad/settings.py">
+      <file leaf-file-name="signals.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consultant_app/signals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2745">
-              <caret line="183" column="11" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
+            <state relative-caret-position="165">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding>
-                <marker date="1480080611227" expanded="true" signature="0:102" ph="&quot;&quot;&quot;Django settings for consultad project....&quot;&quot;&quot;" />
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consultant_app/views.py">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consultant_app/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="13">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#28#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,8 +103,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultad/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="-228">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding>
                 <element signature="e#1#33#0" expanded="true" />
               </folding>
@@ -128,14 +112,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consultant_app/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="175" column="40" selection-start-line="175" selection-start-column="40" selection-end-line="175" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consultant_app/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultant_app/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state relative-caret-position="389">
+              <caret line="227" column="19" selection-start-line="227" selection-start-column="19" selection-end-line="227" selection-end-column="19" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1480065243648" expanded="true" signature="0:60" ph="import ..." />
               </folding>
             </state>
           </provider>
@@ -160,13 +165,23 @@
         <option value="$PROJECT_DIR$/consultant_app/urls.py" />
         <option value="$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py" />
         <option value="$PROJECT_DIR$/consultant_app/migrations/0008_auto_20161118_1413.py" />
-        <option value="$PROJECT_DIR$/consultant_app/views.py" />
-        <option value="$PROJECT_DIR$/consultant_app/serializers.py" />
-        <option value="$PROJECT_DIR$/consultant_app/admin.py" />
-        <option value="dbtable:/a92f3d1b/8ebddab8-29f3-430c-abb2-0fd2731b64f9/consultad_db.public.consultant_app_comment" />
-        <option value="$PROJECT_DIR$/consultant_app/models.py" />
+        <option value="$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/contrib/auth/forms.py" />
+        <option value="$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_auth/serializers.py" />
+        <option value="$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_auth/views.py" />
+        <option value="$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/views.py" />
+        <option value="$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/serializers.py" />
+        <option value="$PROJECT_DIR$/consultant_app/apps.py" />
+        <option value="$PROJECT_DIR$/consultant_app/signals.py" />
+        <option value="$PROJECT_DIR$/consultant_app/__init__.py" />
+        <option value="$PROJECT_DIR$/consultant_app/tests.py" />
+        <option value="$PROJECT_DIR$/consultant_app/filters.py" />
         <option value="$PROJECT_DIR$/consultad/urls.py" />
+        <option value="$PROJECT_DIR$/Setup.py" />
+        <option value="$PROJECT_DIR$/consultant_app/admin.py" />
         <option value="$PROJECT_DIR$/consultad/settings.py" />
+        <option value="$PROJECT_DIR$/consultant_app/views.py" />
+        <option value="$PROJECT_DIR$/consultant_app/models.py" />
+        <option value="$PROJECT_DIR$/consultant_app/serializers.py" />
       </list>
     </option>
   </component>
@@ -207,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -256,16 +272,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../my_project_edit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tixdo" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="serializers&#9;FILE&#9;file:///home/consultadd/Desktop/projectwork/consultad/consultant_app/serializers.py&#10;views&#9;FILE&#9;file:///home/consultadd/Desktop/projectwork/consultad/consultant_app/views.py&#10;authtoken&#9;null&#9;null&#10;user&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="allauth&#9;null&#9;null&#10;views&#9;FILE&#9;file:///home/consultadd/Desktop/projectwork/consultad/consultant_app/views.py&#10;serializers&#9;FILE&#9;file:///home/consultadd/Desktop/projectwork/consultad/consultant_app/serializers.py&#10;authtoken&#9;null&#9;null&#10;user&#9;null&#9;null" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager" selected="Django server.consultad">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -506,7 +523,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="consultad.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../tix_env/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -535,7 +552,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6579f5f1-0dea-4fe4-a53d-053ef9e43c6b" name="Default" comment="" />
+      <changelist id="6af58d85-b344-4cad-8c4a-374113726a29" name="Default" comment="" />
       <created>1479292117489</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -554,27 +571,51 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17370518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3142415" sideWeight="0.5059761" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17370518" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.113944225" sideWeight="0.4852071" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2616099" sideWeight="0.5091633" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24458204" sideWeight="0.49402392" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4380805" sideWeight="0.49402392" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2616099" sideWeight="0.49083665" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2430279" sideWeight="0.5147929" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32662538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7815534" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2616099" sideWeight="0.5091633" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27244583" sideWeight="0.49402392" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2616099" sideWeight="0.49083665" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15298805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7815534" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65325075" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -588,67 +629,140 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_auth/views.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/views.py</url>
+          <line>156</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/views.py</url>
+          <line>212</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/mixins.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/views.py</url>
+          <line>401</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/views.py</url>
+          <line>400</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/views.py</url>
+          <line>378</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/views.py</url>
+          <line>388</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/views.py</url>
+          <line>397</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/serializers.py</url>
+          <line>151</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/serializers.py</url>
+          <line>231</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="44" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/102c8f5d-b2ab-489d-beed-b7a4436b6da0/console.sql" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/utils/translation/__init__.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8833ef0a-15bd-4b3a-9fbe-9a14457ef79f/console.sql" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0011_auto_20161118_1411.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0007_auto_20161118_0728.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0008_auto_20161118_1413.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fdc142d6-6e51-4b99-8649-e9d43e0609cd/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/139ce554-49f2-4e9d-96c3-b76f415e9287/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fdc142d6-6e51-4b99-8649-e9d43e0609cd/console_1.sql" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/6b5bae38-ebbb-4d06-bdd7-020917c23008/consultad_db.public.consultant_app_userprofile_groups" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/6b5bae38-ebbb-4d06-bdd7-020917c23008/consultad_db.public.consultant_app_userprofile" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/6b5bae38-ebbb-4d06-bdd7-020917c23008/consultad_db.public.consultant_app_comment" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6b5bae38-ebbb-4d06-bdd7-020917c23008/console.sql" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/6b5bae38-ebbb-4d06-bdd7-020917c23008/consultad_db.public.consultant_app_project" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0009_auto_20161121_0608.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0008_auto_20161121_0607.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0007_auto_20161121_0607.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0006_auto_20161121_0605.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0005_auto_20161121_0541.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_framework/permissions.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/1735152279/datetime.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/db/models/fields/related.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0012_auto_20161121_1206.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0011_auto_20161121_1136.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0009_auto_20161121_0757.py" />
-    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0010_auto_20161121_0759.py" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/6b5bae38-ebbb-4d06-bdd7-020917c23008/consultad_db.public.consultant_app_consultant" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/6b5bae38-ebbb-4d06-bdd7-020917c23008/consultad_db.public.consultant_app_supporter" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/41916556-cf56-46c8-8a42-db0dc4414494/console.sql" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/41916556-cf56-46c8-8a42-db0dc4414494/consultad_db.public.consultant_app_userprofile" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d03cbf01-8cc6-450a-a830-2e6545c5e9be/console.sql" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/40580df3-9b9b-4c11-aee4-2c878f1571a6/consultad_db.public.consultant_app_user" />
-    <entry file="dbDummy://dbtable:/42a9ad1e/40580df3-9b9b-4c11-aee4-2c878f1571a6/consultad_db.public.consultant_app_project" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/40580df3-9b9b-4c11-aee4-2c878f1571a6/console.sql" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_auth/urls.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_framework/authtoken/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_framework/authtoken/models.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/django/contrib/auth/models.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_framework/serializers.py" />
-    <entry file="file://$PROJECT_DIR$/../env/local/lib/python2.7/site-packages/rest_framework/relations.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8ebddab8-29f3-430c-abb2-0fd2731b64f9/console.sql">
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/allauth/urls.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/allauth/models.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/registration/urls.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/models.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/registration/views.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/django/contrib/auth/models.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/django/contrib/auth/forms.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/serializers.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/views.py" />
+    <entry file="file://$PROJECT_DIR$/../tixdoenv/lib/python3.4/site-packages/rest_auth/app_settings.py" />
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/core/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/allauth/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultad/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultant_app/admin.py">
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/db/models/query_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="-586">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/a92f3d1b/8ebddab8-29f3-430c-abb2-0fd2731b64f9/consultad_db.public.consultant_app_comment">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ef31da73-d0eb-4515-ac38-81b0bd8dc522/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django_filters/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a92f3d1b/ef31da73-d0eb-4515-ac38-81b0bd8dc522/consultad_db.public.account_emailaddress">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -660,48 +774,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultant_app/serializers.py">
+    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-1397097278/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state relative-caret-position="149">
+          <caret line="2686" column="6" selection-start-line="2686" selection-start-column="6" selection-end-line="2686" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/authtoken/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1480065243648" expanded="true" signature="0:60" ph="import ..." />
+            <element signature="e#0#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultad/urls.py">
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="134">
+          <caret line="296" column="6" selection-start-line="296" selection-start-column="6" selection-end-line="296" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultant_app/views.py">
+    <entry file="file://$PROJECT_DIR$/consultant_app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultad/settings.py">
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/template/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2745">
-          <caret line="183" column="11" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
-          <folding>
-            <marker date="1480080611227" expanded="true" signature="0:102" ph="&quot;&quot;&quot;Django settings for consultad project....&quot;&quot;&quot;" />
-          </folding>
+        <state relative-caret-position="149">
+          <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/1cf41bb3-c728-4bfc-8bcb-5d7120ee21f5.Untitled_Document_1">
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/utils/six.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5434">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/db/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="501" column="8" selection-start-line="501" selection-start-column="8" selection-end-line="501" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultad/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -709,12 +874,162 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/contrib/contenttypes/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="158" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/migrations/0010_auto_20161220_0938.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/contrib/contenttypes/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1291">
+          <caret line="303" column="8" selection-start-line="303" selection-start-column="8" selection-end-line="303" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.4/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.4/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="818" column="0" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="468" column="0" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/test/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="400" column="8" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/routers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="e#28#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultad/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#1#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultad/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2715">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="175" column="40" selection-start-line="175" selection-start-column="40" selection-end-line="175" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="227" column="19" selection-start-line="227" selection-start-column="19" selection-end-line="227" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consultant_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="-1786">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
