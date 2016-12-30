@@ -1,5 +1,8 @@
 from django.contrib import admin
 from .models import *
+from image_cropping import ImageCroppingMixin
+
+
 class UserAdmin(admin.ModelAdmin):
     def render_change_form(self, request, context, *args, **kwargs):
          context['adminform'].form.fields['supporter'].queryset = User.objects.filter(role='supporter')

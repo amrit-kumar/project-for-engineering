@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'consultant_app',
     'rest_auth',
     'rest_auth.registration',
+    'easy_thumbnails',
+    'image_cropping',
     'rest_framework.authtoken',
+    'versatileimagefield',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,6 +69,10 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'consultad.urls'
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
 TEMPLATES = [
     {
