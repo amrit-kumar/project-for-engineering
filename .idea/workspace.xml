@@ -9,11 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="78" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af58d85-b344-4cad-8c4a-374113726a29" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultad/settings.py" afterPath="$PROJECT_DIR$/consultad/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/models.py" afterPath="$PROJECT_DIR$/consultant_app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/views.py" afterPath="$PROJECT_DIR$/consultant_app/views.py" />
-    </list>
+    <list default="true" id="6af58d85-b344-4cad-8c4a-374113726a29" name="Default" comment="" />
     <ignored path="consultad.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
