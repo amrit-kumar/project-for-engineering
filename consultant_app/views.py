@@ -291,7 +291,6 @@ class UserViewSet(viewsets.ViewSet):
         serializer=UserSerializer(queryset,context={'request': request})
         return Response(serializer.data)
 
-
 class LogoutViewSet(viewsets.ViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
@@ -323,7 +322,6 @@ class GetActiveViewSet(viewsets.ModelViewSet):
 #         return Response(serializer.data)
 
 class CommentViewSet(viewsets.ModelViewSet):
-
     queryset = Comment.objects.filter(id=0)
     serializer_class = CommentSerializer
     # pagination_class = LargeResultsSetPagination

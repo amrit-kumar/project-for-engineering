@@ -29,10 +29,10 @@ post_update = Signal(providing_args = ['instance'])
 
 
 @receiver(post_save, sender=Project)
-def project_notify(sender, **kwargs):
+def project_notify(sender, created,**kwargs):
 
     obj = kwargs.get('instance')
-    if obj.status=='pending':
+    if obj.status=='pending' and created == True :
         abc= Project.objects.get(title=obj.title)
         consultant=abc.consultant
         consultant=User.objects.get(username=consultant)
@@ -49,7 +49,7 @@ def project_notify(sender, **kwargs):
         else:
             return None
 
-    if obj.status == 'completed':
+    if obj.status == 'completed' and created == False:
         abc = Project.objects.get(title=obj.title)
         consultant = abc.consultant
         consultant = User.objects.get(username=consultant)
@@ -62,11 +62,11 @@ def project_notify(sender, **kwargs):
             text="Supporter %s has completed project %s" % (consultant.supporter, obj.title)
         )
         return None
+
 @receiver(post_save, sender=User)
-def send_update(sender, **kwargs):
+def send_update(sender,created, **kwargs):
     obj = kwargs.get('instance')
     if obj.role == 'consultant':
-
         try:
             send_by=User.objects.get(is_superuser=True)
             bcd='You have been assigned a new consultant %s'% obj.username
@@ -86,13 +86,12 @@ def send_update(sender, **kwargs):
             else:
                 return None
         else:
-
             return None
     try:
         abc= get_object_or_404(Token,user=obj)
         return None
     except:
-            if obj.role == 'supporter' and obj.is_superuser!=True and obj.is_active==False:
+            if obj.role == 'supporter' and obj.is_superuser!=True and obj.is_active==False and created == True:
                     recipient = User.objects.get(is_superuser=True)
                     Notification.objects.create(
                         recipient=recipient,
@@ -105,9 +104,9 @@ def send_update(sender, **kwargs):
         return None
 
 @receiver(post_save, sender= Comment)
-def comment_recieved(sender,**kwargs):
+def comment_recieved(sender,created,**kwargs):
     obj= kwargs.get('instance')
-    if obj.supporter.is_superuser is False:
+    if obj.supporter.is_superuser is False and created == True:
         if obj.project.consultant.supporter == obj.supporter:
             recipient=User.objects.get(is_superuser=True)
             Notification.objects.create(
@@ -144,7 +143,7 @@ def comment_recieved(sender,**kwargs):
         return None
 
     else:
-        if obj.supporter.is_superuser and obj.project.consultant.supporter.is_superuser is False:
+        if obj.supporter.is_superuser and obj.project.consultant.supporter.is_superuser is False and created == True:
             recipient=obj.project.consultant.supporter
             Notification.objects.create(
                 recipient=recipient,
