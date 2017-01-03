@@ -1,0 +1,56 @@
+class SupporterDetailSerializer(serializers.ModelSerializer):
+    consultant = ConsultantInfoSerializer(read_only=True,many=True)
+    username = serializers.SerializerMethodField('getting_supporter')
+    skillset=SkillSetSerializer(many=True)
+    # skillset = serializers.PrimaryKeyRelatedField(many=True, queryset=SkillSet.objects.all(), required=False)
+    project_list = serializers.SerializerMethodField()
+
+    def get_project_list(self, obj):
+        data = Project.objects.filter(consultant__supporter=obj)
+        serializers = ProjectSerializer(data, many=True)
+        return serializers.data
+    def getting_supporter(self, obj):
+        return obj.username
+
+    def update(self, instance, validated_data):
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
+        instance.gender = validated_data.get('gender', instance.gender)
+        instance.role = validated_data.get('role', instance.role)
+        instance.employee_id = validated_data.get('employee_id', instance.employee_id)
+        instance.skype_username = validated_data.get('skype_username', instance.skype_username)
+        instance.mobile_no = validated_data.get('mobile_no', instance.mobile_no)
+        instance.company_name = validated_data.get('company_name', instance.company_name)
+        instance.experience = validated_data.get('experience', instance.experience)
+        instance.status = validated_data.get('status', instance.status)
+        instance.assigned_date = validated_data.get('assigned_date', instance.assigned_date)
+        instance.current_location = validated_data.get('current_location', instance.current_location)
+        instance.resume = validated_data.get('resume', instance.resume)
+        instance.supporter = validated_data.get('supporter', instance.supporter)
+        skillset = validated_data.get('skillset')
+        # skillset = validated_data.pop('skillset')
+        #
+        for skillset in skillset:
+            # print(skillset)
+            skillset, created = SkillSet.objects.get_or_create(pointer=skillset['pointer'],
+                                                               technology=skillset['technology'],
+                                                               supporter=skillset['supporter'])
+            instance.skillset.add(skillset)
+
+        return instance
+        # skillset = validated_data.pop('skillset')
+        #
+        # for skillset in skillset:
+        #     skillset, created = SkillSet.objects.get_or_create(name=skillset['name'])
+        #     instance.ingredients.add(skillset)
+
+        instance.save()
+        return instance
+
+    class Meta:
+        model = User
+        fields = ('id', 'username','first_name','last_name','skype_username','email','employee_id','gender','role','designation','mobile_no','experience','is_superuser','assigned_date','skillset','consultant','project_list',)
+        read_only_fields=('username','email',)
+        order_by= ('-assigned_date')
+        depth = 1
+

@@ -1,13 +1,14 @@
+from django.db.models.signals import post_save
 from . models import *
 from django.dispatch import Signal
 from django.db.models.signals import pre_save, pre_delete, post_save, post_delete
 from django.dispatch import receiver
-from django.contrib.auth.models import User
-from consultant_app.models import *
-import django.dispatch
-from django.core.signals import request_finished
+from django.shortcuts import get_object_or_404, render
+from rest_framework.authtoken.models import Token
 
 post_update = Signal(providing_args = ['instance'])
+
+
 
 
 # @receiver(post_save, sender=Project)
@@ -33,13 +34,15 @@ def project_notify(sender, **kwargs):
     obj = kwargs.get('instance')
     if obj.status=='pending':
         abc= Project.objects.get(title=obj.title)
-        consultant=abc.consultant.username
+        consultant=abc.consultant
         consultant=User.objects.get(username=consultant)
-
+        admin=User.objects.get(is_superuser=True)
         recipient=consultant.supporter
         Notification.objects.create(
             recipient=recipient,
             project=obj,
+            type="assigned_project",
+            send_by=admin,
             text="Your consultant %s has been assigned a new project %s" % (consultant.username,obj.title)
         )
     if obj.status == 'completed':
@@ -50,49 +53,53 @@ def project_notify(sender, **kwargs):
         Notification.objects.create(
             recipient=recipient,
             project=obj,
+            type="project_completed",
+            send_by=consultant.supporter,
             text="Supporter %s has completed project %s" % (consultant.supporter, obj.title)
         )
         return None
-
-@receiver(pre_save, sender=User)
-def send_update(sender, **kwargs):
+@receiver(post_save, sender=User)
+def send_update(sender, created,**kwargs):
     obj = kwargs.get('instance')
-    print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",obj)
-    if obj.role == 'consultant':
+    if obj.role == 'consultant' and created:
         recipient = obj.supporter
-        Notification.objects.create(
-            recipient=recipient,
-            text="You have been assigned a new consultant %s" % obj.username
-        )
-        return None
-    flag=False
-    for i in User.objects.all():
-        if i.username == obj.username:
-            flag= True
-            break;
-
-    if flag==False:
-        if obj.role == 'supporter' and obj.is_superuser!=True:
-            recipient = User.objects.get(is_superuser=True)
+        admin=User.objects.get(is_superuser=True)
+        if recipient is not None:
             Notification.objects.create(
                 recipient=recipient,
-                text="A new supporter %s has been registered" % obj.username
+                type="assigned_consultant",
+                send_by=admin,
+                text="You have been assigned a new consultant %s" % obj.username
             )
             return None
-
-    return None
-
+        else:
+            return None
+    try:
+        abc= get_object_or_404(Token,user=obj)
+        return None
+    except:
+            if obj.role == 'supporter' and obj.is_superuser!=True:
+                recipient = User.objects.get(is_superuser=True)
+                Notification.objects.create(
+                    recipient=recipient,
+                    send_by=obj,
+                    type="registered",
+                    text="A new supporter %s has been registered" % obj.username
+                )
+                return None
+            else:
+                return None
 @receiver(post_save, sender= Comment)
 def comment_recieved(sender,**kwargs):
     obj= kwargs.get('instance')
-
-
     if obj.supporter.role=='supporter':
         recipient=User.objects.get(is_superuser=True)
         Notification.objects.create(
             recipient= recipient,
             comment= obj,
             project=obj.project,
+            type="commented",
+            send_by=obj.supporter,
             text= "%s has commented on %s" % (obj.supporter, obj.project)
         )
         return None
@@ -102,49 +109,14 @@ def comment_recieved(sender,**kwargs):
                 recipient=obj.project.consultant.supporter,
                 comment=obj,
                 project=obj.project,
+                type="commented",
+                send_by=obj.supporter,
                 text="%s has commented on %s" % (obj.supporter, obj.project)
 
             )
-            return Comment.pk
-
-@receiver(post_save, sender=User)
-def send_update(sender, **kwargs):
-    obj = kwargs.get('instance')
-    print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",obj)
-    # if obj.role == 'consultant':
-    #     recipient = obj.supporter
-    #     Notification.objects.create(
-    #
-    #         recipient=recipient,
-    #         text="You have been assigned a new consultant %s" % obj.username
-    #     )
-    #     return None
-    # flag=False
-    # for i in User.objects.all():
-    #     if i.username == obj.username:
-    #         flag= True
-    #         break;
-    #
-    # if flag==False:
-    if obj.role == 'consultant':
-        # sender = User.objects.get(username=obj.username)
-        recipient=User.objects.get(is_superuser=True)
-        # if recipient
-        # recipient = obj.username
-        print("recipient tttttttttttttttt",recipient)
-
-        Notification.objects.create(
-            sender=obj,
-            recipient=recipient,
-            text="You have been assigned a new consultant %s" % obj.username
-        )
-        return None
-
-    # return None
+            return None
 
 
-
-#
 # @receiver(post_save, sender=User)
 # def send_update(sender,**kwargs):
 #     obj=kwargs.get('instance')
@@ -155,48 +127,3 @@ def send_update(sender, **kwargs):
 #             text="A new supporter %s has been registered" % obj.username
 #         )
 #         return None
-
-
-
-#In these cases, you can register to receive signals sent only by particular senders
-
-# def save_profile(sender, instance, **kwargs):
-#     instance.profile.save()
-
-
-#
-# @receiver(post_save, sender=Project)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         print("Request finished!!!!!!!!!!!!!!!!!!!!")
-#         Notification.objects.create(user=instance)
-#
-# @receiver(post_save, sender=Project)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.profile.save()
-
-
-# post_save.connect(save_profile, sender=User)
-# Signal.connect(receiver, sender=None, weak=True, dispatch_uid=None)
-#Defining signals
-# pizza_done = django.dispatch.Signal(providing_args=["toppings", "size"])
-# @receiver(pre_save, sender=Project)
-#sender is model name
-# def my_handler(sender, **kwargs):
-#     ...
-
-#The my_handler function will only be called when an instance of MyModel is saved.
-# @receiver(request_finished)
-# def my_callback(sender, **kwargs):
-#     print("Request finished!")
-
-
-# request_finished.connect(my_callback, dispatch_uid="my_unique_identifier")
-
-
-#end result is that your receiver function will only be bound to the
-#  signal once for each unique dispatch_uid value:
-
-#connecting and disconnecting signals
-
-
