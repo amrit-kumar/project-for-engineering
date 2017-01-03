@@ -33,6 +33,7 @@ from resizeimage import resizeimage
 
 
 
+
 def get_attachment_file_path(instance, filename):
     """
     Produces a unique file path for the upload_to of a FileField.

@@ -36,6 +36,7 @@ class LargeResultsSetPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 10000
 
+
 # class AdminPanelViewSet(viewsets.ReadOnlyModelViewSet):
 #     authentication_classes = (TokenAuthentication,)
 #     # permission_classes = (IsAdminUser)

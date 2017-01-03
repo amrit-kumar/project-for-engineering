@@ -2,22 +2,16 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/consultant_app/views.py" line="3" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="72" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="76" />
-    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="48" />
     <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="73" />
     <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="77" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="49" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="74" />
+    <bookmark url="file://$PROJECT_DIR$/consultant_app/models.py" line="78" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6af58d85-b344-4cad-8c4a-374113726a29" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultad/settings.py" afterPath="$PROJECT_DIR$/consultad/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultad/urls.py" afterPath="$PROJECT_DIR$/consultad/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/admin.py" afterPath="$PROJECT_DIR$/consultant_app/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/models.py" afterPath="$PROJECT_DIR$/consultant_app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/serializers.py" afterPath="$PROJECT_DIR$/consultant_app/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/signals.py" afterPath="$PROJECT_DIR$/consultant_app/signals.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/tests.py" afterPath="$PROJECT_DIR$/consultant_app/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultant_app/views.py" afterPath="$PROJECT_DIR$/consultant_app/views.py" />
     </list>
     <ignored path="consultad.iws" />
@@ -53,31 +47,30 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultant_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="-1396">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#4007#4041#0" expanded="false" />
-                <element signature="e#4985#5016#0" expanded="false" />
+                <element signature="e#4008#4042#0" expanded="false" />
+                <element signature="e#4986#5017#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultant_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="-1425">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#1371#1428#0" expanded="false" />
-                <element signature="e#6127#6172#0" expanded="false" />
-                <element signature="e#9560#9605#0" expanded="false" />
-                <element signature="e#11798#11835#0" expanded="false" />
-                <element signature="e#12167#12213#0" expanded="false" />
-                <element signature="e#13370#13371#0" expanded="false" />
-                <element signature="e#13995#14034#0" expanded="false" />
+                <element signature="e#6128#6173#0" expanded="false" />
+                <element signature="e#9561#9606#0" expanded="false" />
+                <element signature="e#11799#11836#0" expanded="false" />
+                <element signature="e#12168#12214#0" expanded="false" />
+                <element signature="e#13371#13372#0" expanded="false" />
+                <element signature="e#13996#14035#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -86,81 +79,20 @@
       <file leaf-file-name="validators.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultant_app/validators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="424">
               <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/PIL/Image.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consultad/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
               <folding>
-                <element signature="e#722#759#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="files.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/files.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="versatileimagefield.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/versatileimagefield.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#42#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consultant_app/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="223" column="48" selection-start-line="223" selection-start-column="48" selection-end-line="223" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#2835#2836#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fields.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/rest_framework/fields.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#3161#3195#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -201,9 +133,9 @@
         <option value="$PROJECT_DIR$/consultant_app/versatilimagefield.py" />
         <option value="$PROJECT_DIR$/consultant_app/validators.py" />
         <option value="$PROJECT_DIR$/consultant_app/signals.py" />
-        <option value="$PROJECT_DIR$/consultad/settings.py" />
-        <option value="$PROJECT_DIR$/consultant_app/views.py" />
         <option value="$PROJECT_DIR$/consultant_app/serializers.py" />
+        <option value="$PROJECT_DIR$/consultant_app/views.py" />
+        <option value="$PROJECT_DIR$/consultad/settings.py" />
         <option value="$PROJECT_DIR$/consultant_app/models.py" />
       </list>
     </option>
@@ -610,17 +542,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2310757" sideWeight="0.4852071" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11792829" sideWeight="0.4852071" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2616099" sideWeight="0.5123506" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.250774" sideWeight="0.49402392" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.250774" sideWeight="0.49402392" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.4876494" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27089784" sideWeight="0.4876494" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2430279" sideWeight="0.5147929" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32662538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -689,11 +621,16 @@
           <line>213</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/consultant_app/models.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="53" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -704,8 +641,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -795,8 +732,8 @@
           <caret line="184" column="62" selection-start-line="184" selection-start-column="62" selection-end-line="184" selection-end-column="62" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -805,6 +742,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#386#424#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -847,13 +788,12 @@
           <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -871,8 +811,8 @@
           <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -918,13 +858,12 @@
           <caret line="127" column="41" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -943,8 +882,8 @@
           <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -980,13 +919,12 @@
           <caret line="363" column="6" selection-start-line="363" selection-start-column="6" selection-end-line="363" selection-end-column="6" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1005,8 +943,8 @@
           <caret line="47" column="36" selection-start-line="42" selection-start-column="35" selection-end-line="47" selection-end-column="36" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1052,13 +990,12 @@
           <caret line="364" column="8" selection-start-line="364" selection-start-column="8" selection-end-line="364" selection-end-column="8" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,8 +1014,8 @@
           <caret line="151" column="8" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="8" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1118,13 +1055,12 @@
           <caret line="8" column="33" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1142,8 +1078,8 @@
           <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1191,13 +1127,12 @@
           <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1683,6 +1618,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-932">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1698,6 +1634,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#386#424#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1769,26 +1709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/versatileimagefield.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#42#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1806,24 +1726,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/PIL/Image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#722#759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consultant_app/validators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1850,7 +1752,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consultant_app/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="-4065">
           <caret line="223" column="48" selection-start-line="223" selection-start-column="48" selection-end-line="223" selection-end-column="48" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -1859,39 +1761,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultad/settings.py">
+    <entry file="file://$PROJECT_DIR$/user/b977bb10-ce98-40bc-9a0e-848bfaa6b70d.dips_serializers">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+        <state relative-caret-position="765">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/utils/encoding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/utils/translation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#38#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/utils/crypto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="337" column="4" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/authemail/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/versatileimagefield.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/versatileimagefield/files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tix_env/lib/python3.4/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#722#759#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consultant_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="-1396">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#4007#4041#0" expanded="false" />
-            <element signature="e#4985#5016#0" expanded="false" />
+            <element signature="e#4008#4042#0" expanded="false" />
+            <element signature="e#4986#5017#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consultant_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="-1425">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1371#1428#0" expanded="false" />
-            <element signature="e#6127#6172#0" expanded="false" />
-            <element signature="e#9560#9605#0" expanded="false" />
-            <element signature="e#11798#11835#0" expanded="false" />
-            <element signature="e#12167#12213#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13995#14034#0" expanded="false" />
+            <element signature="e#6128#6173#0" expanded="false" />
+            <element signature="e#9561#9606#0" expanded="false" />
+            <element signature="e#11799#11836#0" expanded="false" />
+            <element signature="e#12168#12214#0" expanded="false" />
+            <element signature="e#13371#13372#0" expanded="false" />
+            <element signature="e#13996#14035#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultant_app/validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultad/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+          <folding>
+            <element signature="e#3161#3195#0" expanded="false" />
           </folding>
         </state>
       </provider>

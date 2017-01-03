@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'versatileimagefield',
     'consultant_app',
     'ws4redis',
+    # 'authemail',
+    # 'accounts',
 
     'django.contrib.sites',
     'django.contrib.admin',
