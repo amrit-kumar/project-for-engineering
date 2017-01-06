@@ -33,20 +33,19 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'oauth2_provider',
+    'consultant_app',
     'rest_auth',
     'rest_auth.registration',
+    'easy_thumbnails',
+    'image_cropping',
     'rest_framework.authtoken',
     'versatileimagefield',
-    'consultant_app',
-    'ws4redis',
-    # 'authemail',
-    # 'accounts',
 
-    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,6 +69,10 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'consultad.urls'
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
 TEMPLATES = [
     {
@@ -109,51 +112,6 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "none"
 SOCIALACCOUNT_QUERY_EMAIL = True
 LOGIN_REDIRECT_URL = "/"
-
-# VERSATILEIMAGEFIELD_SETTINGS = {
-#     # The amount of time, in seconds, that references to created images
-#     # should be stored in the cache. Defaults to `2592000` (30 days)
-#     'cache_length': 2592000,
-#     # The name of the cache you'd like `django-versatileimagefield` to use.
-#     # Defaults to 'versatileimagefield_cache'. If no cache exists with the name
-#     # provided, the 'default' cache will be used instead.
-#     'cache_name': 'versatileimagefield_cache',
-#     # The save quality of modified JPEG images. More info here:
-#     # https://pillow.readthedocs.io/en/latest/handbook/image-file-formats.html#jpeg
-#     # Defaults to 70
-#     'jpeg_resize_quality': 70,
-#     # The name of the top-level folder within storage classes to save all
-#     # sized images. Defaults to '__sized__'
-#     'sized_directory_name': '__sized__',
-#     # The name of the directory to save all filtered images within.
-#     # Defaults to '__filtered__':
-#     'filtered_directory_name': '__filtered__',
-#     # The name of the directory to save placeholder images within.
-#     # Defaults to '__placeholder__':
-#     'placeholder_directory_name': '__placeholder__',
-#     # Whether or not to create new images on-the-fly. Set this to `False` for
-#     # speedy performance but don't forget to 'pre-warm' to ensure they're
-#     # created and available at the appropriate URL.
-#     'create_images_on_demand': True,
-#     # A dot-notated python path string to a function that processes sized
-#     # image keys. Typically used to md5-ify the 'image key' portion of the
-#     # filename, giving each a uniform length.
-#     # `django-versatileimagefield` ships with two post processors:
-#     # 1. 'versatileimagefield.processors.md5' Returns a full length (32 char)
-#     #    md5 hash of `image_key`.
-#     # 2. 'versatileimagefield.processors.md5_16' Returns the first 16 chars
-#     #    of the 32 character md5 hash of `image_key`.
-#     # By default, image_keys are unprocessed. To write your own processor,
-#     # just define a function (that can be imported from your project's
-#     # python path) that takes a single argument, `image_key` and returns
-#     # a string.
-#     'image_key_post_processor': None,
-#     # Whether to create progressive JPEGs. Read more about progressive JPEGs
-#     # here: https://optimus.io/support/progressive-jpeg/
-#     'progressive_jpeg': False
-# }
-
-
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -198,10 +156,12 @@ CORS_ALLOW_HEADERS = (
  'authorization',
  'x-csrftoken',
   )
+
+
 AUTHENTICATION_BACKENDS = (
-    # Default backend — used to login by username in Django admin
+    # Default backend -- used to login by username in Django admin
     "django.contrib.auth.backends.ModelBackend",
-    # allauth specific authentication methods, such as login by e-mail
+    # `allauth` specific authentication methods, such as login by e-mail
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 REST_AUTH_SERIALIZERS = {

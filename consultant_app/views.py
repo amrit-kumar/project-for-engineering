@@ -1,4 +1,3 @@
-import sys
 from django.shortcuts import render
 from .models import *
 from rest_framework.response import Response
@@ -18,11 +17,9 @@ from django.http import Http404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from rest_framework.pagination import PageNumberPagination
 from rest_framework import permissions
-from rest_framework.parsers import MultiPartParser, FormParser,FileUploadParser
-from PIL import Image
-from ws4redis.publisher import RedisPublisher
-
-
+from rest_framework.parsers import MultiPartParser, FormParser
+import os
+# from os.path import abspath, dirname
 
 class UserPermissionsObj(permissions.BasePermission):
 
@@ -35,7 +32,6 @@ class LargeResultsSetPagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = 'page_size'
     max_page_size = 10000
-
 
 # class AdminPanelViewSet(viewsets.ReadOnlyModelViewSet):
 #     authentication_classes = (TokenAuthentication,)
@@ -83,7 +79,7 @@ class LargeResultsSetPagination(PageNumberPagination):
 class SupporterPanelViewSet(viewsets.ReadOnlyModelViewSet):
     # authentication_classes = (TokenAuthentication,)
     # permission_classes = (IsAuthenticated,)
-    queryset = User.objects.filter(role='supporter')
+    queryset = User.objects.filter(role='supporter').filter(is_active=True)
     serializer_class = SupporterPanelSerializer
 
     @detail_route(methods=["GET", "POST"])
@@ -94,12 +90,21 @@ class SupporterPanelViewSet(viewsets.ReadOnlyModelViewSet):
             if user.is_superuser == True:
                 return Response("User Is Admin So Cannot Be Deleted", status=status.HTTP_406_NOT_ACCEPTABLE)
             else:
-                user.delete()
-                data=User.objects.all()
-                serializers=SupporterDetailSerializer(data,many=True)
-                return Response(serializers.data, status=status.HTTP_200_OK)
+                if user.role == 'consultant':
+                    user.delete()
+                    data=User.objects.filter(role='consultant')
+                    serializers=CreateConsultantSerializer(data,many=True)
+                    return Response(serializers.data, status=status.HTTP_200_OK)
+                else:
+                    if user.role== 'supporter':
+                        user.delete()
+                        data = User.objects.filter(role='supporter')
+                        serializers = SupporterDetailSerializer(data, many=True)
+                        return Response(serializers.data, status=status.HTTP_200_OK)
         except User.DoesNotExist:
             raise Http404("No User matches the given query.")
+
+
     @detail_route(methods=["GET", "POST"])
     def delete_project(self, request, pk=None):
         try:
@@ -123,27 +128,48 @@ class SupporterPanelViewSet(viewsets.ReadOnlyModelViewSet):
         except To_do_list.DoesNotExist:
             raise Http404("No to_do_list matches the given query.")
 
+    @detail_route(methods=["GET", "POST"])
+    def delete_notification(self, request, pk=None):
+        try:
+            notification = Notification.objects.filter(recipient_id=request.user.id).get(id=pk)
+            notification.delete()
+            data = Notification.objects.filter(recipient_id=request.user.id)
+            serializers = NotificationSerializer(data, many=True)
+            return Response(serializers.data, status=status.HTTP_200_OK)
+
+        except Notification.DoesNotExist:
+            raise Http404("No notification matches the given query.")
+
+    @detail_route(methods=["GET", "POST"])
+    def active_user(self, request, pk=None):
+        try:
+            user = User.objects.get(id=pk)
+            user.is_active=True
+            user.save()
+            data = User.objects.filter(id=pk)
+            serializers = SupporterDetailSerializer(data, many=True)
+            return Response(serializers.data,status=status.HTTP_200_OK)
+        except User.DoesNotExist:
+            raise Http404("No user matches the given query.")
+
+
 class AddConsultantViewSet(viewsets.ModelViewSet):
     # authentication_classes = (TokenAuthentication,)
     # permission_classes = (IsAdminUser,)
-    parser_classes = (MultiPartParser, FormParser,FileUploadParser,)
+    # parser_classes = (MultiPartParser, FormParser, )
     queryset = User.objects.filter(role='consultant')
     serializer_class = CreateConsultantSerializer
     filter_backends = (filters.DjangoFilterBackend, filters.SearchFilter)
     search_fields = ('first_name',)
     filter_fields = ('first_name',)
 
-    # def post(self, request, filename, format=None):
-    #     file_obj = request.POST['resume']
-    #     print("hiiiiiiiiii there",file_obj)
-    #     # do some stuff with uploaded file
-    #     return Response(status=204)
-
     def create(self, request):
         serializer = CreateConsultantSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response({'status': 'Success'})
+            value=serializer.data['resume']
+            # new_dict.update({'resume_name':os.path.basename(serializer.data['resume'])})
+            return Response({'message':'success'})
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -151,9 +177,9 @@ class AddConsultantViewSet(viewsets.ModelViewSet):
 class AddSupporterViewSet(viewsets.ModelViewSet):
     # authentication_classes = (TokenAuthentication,)
     # permission_classes = (IsAdminUser,)
+    # parser_classes = (MultiPartParser, FormParser, )
     queryset = User.objects.filter(id=0)
     serializer_class = CreateSupporterSerializer
-
 
     # def create(self, request, *args, **kwargs):
     #     serializer = self.get_serializer(data=request.data)
@@ -185,7 +211,6 @@ class AddProjectViewSet(viewsets.ModelViewSet):
 
     def create(self, request):
         serializer = CreateProjectSerializer(data=request.data)
-
         if serializer.is_valid():
             serializer.save()
             return Response({'status': 'Success'})
@@ -194,16 +219,18 @@ class AddProjectViewSet(viewsets.ModelViewSet):
 
     @detail_route(methods=['GET', 'POST'])
     def get_comments(self, request, pk=None):
-        queryset = Project.objects.filter(id=pk)
-        serializers = ProjectInfoSerializer(queryset, many=True)
+        data = Project.objects.get(id=pk)
+        serializers = ProjectInfoSerializer(data)
         data=serializers.data
-        return Response(data.pop(0))
+        return Response(data)
+
 class SupporterDetailViewset(viewsets.ModelViewSet):
     # authentication_classes = (TokenAuthentication,)
     # permission_classes = (IsAuthenticated,)
-    queryset = User.objects.filter(role='supporter')
+    # parser_classes = (MultiPartParser, FormParser, )
+    queryset = User.objects.filter(role='supporter').filter(is_active=True)
     serializer_class = SupporterDetailSerializer
-    permission_classes=(UserPermissionsObj,)
+    # permission_classes=(UserPermissionsObj,)
     filter_backends = (filters.DjangoFilterBackend, filters.SearchFilter)
     search_fields = ('first_name',)
     filter_fields = ('first_name',)
@@ -261,9 +288,8 @@ class UserViewSet(viewsets.ViewSet):
     def list(self, request):
         user= Token.objects.get(key=request.auth)
         queryset= User.objects.get(username=user.user)
-        serializer = UserSerializer(queryset, context={'request': request})
+        serializer=UserSerializer(queryset,context={'request': request})
         return Response(serializer.data)
-
 
 class LogoutViewSet(viewsets.ViewSet):
     authentication_classes = (TokenAuthentication,)
@@ -294,8 +320,8 @@ class GetActiveViewSet(viewsets.ModelViewSet):
 #         queryset= User.objects.get(username=request.user.username)
 #         serializer= ModifyUserSerializer(queryset)
 #         return Response(serializer.data)
-class CommentViewSet(viewsets.ModelViewSet):
 
+class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.filter(id=0)
     serializer_class = CommentSerializer
     # pagination_class = LargeResultsSetPagination
@@ -364,5 +390,3 @@ class To_do_listViewSet(viewsets.ModelViewSet):
 #         data=User.objects.get(username=request.auth.user.username)
 #         serializers=UserSerializer(data)
 #         return Response(serializers.data)
-class SomeCustomSizedImageCls:
-    pass

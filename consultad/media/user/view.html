@@ -1,0 +1,9 @@
+<form action="{% url 'edit_blog' blog_id=blog.id blog_user=blog.username user=request.user %}" method="post">
+                    {% csrf_token %}
+
+
+                    <textarea name="blog" rows="20" cols="180" >{{ blog.blog }}</textarea><br/>
+
+                    <input type="submit" value="edit" name="edit" /><br/>
+
+</form>

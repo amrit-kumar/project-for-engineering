@@ -1,0 +1,30 @@
+<head>
+{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login/blog.css' %}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="">welcome {{ user.username }}!!!</a>
+        <a class="navbar-brand" href="/logout"><span class="glyphicon glyphicon-off"></span> Logout</a>
+    </div>
+  </div>
+</nav>
+<form action="{% url 'add_blog'  %}" method="post">
+            {% csrf_token %}
+            <div class="panel panel-info">
+                <div class="panel-heading"><h1>Blogs</h1></div>
+                        <textarea name="blog" rows="8" cols="60" ></textarea><br/>
+                        <input type="submit" value="submit" name="_submit" /><br/><hr />
+                        {% for blog in blog_list %}
+                            <div class="well well-lg" >
+                                 {{ blog|safe|truncatewords:"20"|linebreaks }}
+                                 <a href={% url 'view_blog' blog_id=blog.id %}>read more</a>
+                            </div>
+                        {% endfor %}
+            </div>
+</form>
+
