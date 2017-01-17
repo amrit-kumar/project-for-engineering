@@ -26,6 +26,8 @@ SECRET_KEY = '!y75(+yutnyg&36(!s%u@hu9h-k&bmj9(&h1sq+e7y=e41bae9'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -41,10 +43,13 @@ INSTALLED_APPS = [
     'consultant_app',
     'rest_auth',
     'rest_auth.registration',
-    'easy_thumbnails',
-    'image_cropping',
+    # 'easy_thumbnails',
+    # 'image_cropping',
     'rest_framework.authtoken',
     'versatileimagefield',
+    'ws4redis',
+    'simple_history',
+    'channels',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +58,62 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+# WEBSOCKET_URL = '/ws/'
+# WS4REDIS_CONNECTION = {
+#     'host': 'redis.example.com',
+#     'port': 16379,
+#     'db': 17,
+#     'password': 'verysecret',
+# }
+# WS4REDIS_EXPIRE = 7200
+# WS4REDIS_PREFIX = 'ws'
+# WS4REDIS_SUBSCRIBER = 'myapp.redis_store.RedisSubscriber'
+# WSGI_APPLICATION = 'ws4redis.django_runserver.application'
+# WS4REDIS_ALLOWED_CHANNELS= Websocket for Redis allows each client to subscribe and
+# to publish on every possible channel. To restrict and control access
+# SESSION_ENGINE = 'redis_sessions.session'
+# SESSION_REDIS_PREFIX = 'session'
+
+# CELERY SETTINGS
+# BROKER_URL = 'redis://localhost:6379/0'
+# CELERY_ACCEPT_CONTENT = ['json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "asgiref.inmemory.ChannelLayer",
+#         "ROUTING": "consultad.routing.channel_routing",
+#     },
+# }
+REDIS_HOST= '192.168.1.33'
+REDIS_PORT= 6379
+REDIS_SERVER_CONF = {
+    'servers' : {
+      'main_server': {
+        'HOST' : '192.168.1.33',
+        'PORT' : 6379 ,
+        'DATABASE':0
+    }
+  }
+}
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            # "hosts": [("192.168.1.33", 6379)],
+            "hosts": [os.environ.get('REDIS_URL', '192.168.1.33:6379')],
+
+        },
+        "ROUTING": "consultad.routing.channel_routing",
+    },
+}
+
+
+
+
+
+
 SITE_ID = 2
 
 MIDDLEWARE_CLASSES = [
@@ -66,13 +127,15 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'simple_history.middleware.HistoryRequestMiddleware',
+
 ]
 
 ROOT_URLCONF = 'consultad.urls'
-from easy_thumbnails.conf import Settings as thumbnail_settings
-THUMBNAIL_PROCESSORS = (
-    'image_cropping.thumbnail_processors.crop_corners',
-) + thumbnail_settings.THUMBNAIL_PROCESSORS
+# from easy_thumbnails.conf import Settings as thumbnail_settings
+# THUMBNAIL_PROCESSORS = (
+#     'image_cropping.thumbnail_processors.crop_corners',
+# ) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
 TEMPLATES = [
     {
@@ -81,6 +144,8 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.core.context_processors.static',
+                'ws4redis.context_processors.default',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',

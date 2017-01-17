@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+
+<body>
+
+<h1>My First Web Page!</h1>
+<p>websocket implementation.</p>
+<input id="input" type="text", placeholder="send message">
+<button  onclick="sendMessage()">submit</button>
+
+
+
+<script type="text/javascript">
+    // Note that the path doesn't matter for routing; any WebSocket
+// connection gets bumped over to WebSocket consumers
+
+//socket = new WebSocket("ws://" + window.location.host + "/chat/");
+//var socket = io.connect('http://192.168.1.33:8000');
+socket = new WebSocket("ws://192.168.1.33:8000/");
+    //console.log("requestttttttttttt",message.session.session_key)
+
+    socket.onmessage = function(e)
+    {
+        console.log(e,"e")
+        alert(e.data);
+    };
+
+    socket.onopen = function(value) {
+        console.log("open")
+        socket.send(value);
+    };
+// Call onopen directly if socket is already open
+//if (socket.readyState == WebSocket.OPEN)
+          //console.log("script ke andar 33333")
+
+function sendMessage() {
+             var v= document.getElementById("input")
+              console.log(v.value,'asdiugasdjbjhsad')
+    if (socket.readyState == WebSocket.OPEN) socket.onopen(v.value);
+
+
+}
+
+</script>
+</body>
+
+</html>

@@ -22,6 +22,7 @@ from rest_framework.authtoken import views
 from django.views.decorators.csrf import csrf_exempt
 
 
+
 router=routers.DefaultRouter()
 # router.register(r'admin_panel', AdminPanelViewSet, 'admin_panel')
 router.register(r'supporter_panel', SupporterPanelViewSet, 'supporter_panel')
@@ -52,3 +53,4 @@ urlpatterns = [
     url(r'^', include('django.contrib.auth.urls')),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

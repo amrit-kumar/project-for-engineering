@@ -7,6 +7,17 @@ from django.shortcuts import get_object_or_404, render
 from rest_framework.authtoken.models import Token
 
 post_update = Signal(providing_args = ['instance'])
+from django.http import HttpResponse,HttpResponseRedirect
+from channels.handler import AsgiHandler
+from django.core.urlresolvers import reverse
+from channels import Group, Channel
+from channels.sessions import channel_session
+import redis
+from django.db.models.signals import pre_save, pre_delete, post_save, post_delete
+from django.dispatch import receiver
+import json
+from .views import *
+from .models import *
 
 
 
@@ -103,12 +114,15 @@ def send_update(sender,created, **kwargs):
     else:
         return None
 
+
+redis_conn = redis.Redis("localhost", 6379)
 @receiver(post_save, sender= Comment)
 def comment_recieved(sender,created,**kwargs):
     obj= kwargs.get('instance')
     if obj.supporter.is_superuser is False and created == True:
         if obj.project.consultant.supporter == obj.supporter:
             recipient=User.objects.get(is_superuser=True)
+            print("chalaaaaaaaaaaaaaaaaaaaaaaaaa")
             Notification.objects.create(
                 recipient= recipient,
                 comment= obj,
@@ -120,6 +134,7 @@ def comment_recieved(sender,created,**kwargs):
             return None
         else:
             if obj.project.consultant.supporter != obj.supporter:
+                print("22222222222222222")
                 recipient1 = User.objects.get(is_superuser=True)
                 Notification.objects.create(
                     recipient=recipient1,
@@ -128,8 +143,20 @@ def comment_recieved(sender,created,**kwargs):
                     type="commented",
                     send_by=obj.supporter,
                     text="%s has commented on %s" % (obj.supporter, obj.project))
+                print("ttttttttttttttttttttttt")
+                #
+                # for reply_channel in redis_conn.smembers("readers"):
+                #     print("signals reply channel1111",reply_channel)
+                #     Channel(reply_channel).send({
+                #         "text": json.dumps({
+                #             "content": "channel running"
+                #         })
+
+                    # })
+
                 recipient2 = User.objects.get(username=obj.project.consultant.supporter.username)
                 if recipient1 !=recipient2:
+                    print("33333333333333333333")
                     Notification.objects.create(
                         recipient=recipient2,
                         comment=obj,
@@ -144,6 +171,7 @@ def comment_recieved(sender,created,**kwargs):
 
     else:
         if obj.supporter.is_superuser and obj.project.consultant.supporter.is_superuser is False and created == True:
+            print("44444444444444444444444")
             recipient=obj.project.consultant.supporter
             Notification.objects.create(
                 recipient=recipient,

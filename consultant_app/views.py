@@ -19,7 +19,12 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework import permissions
 from rest_framework.parsers import MultiPartParser, FormParser
 import os
-# from os.path import abspath, dirname
+from consultant_app.error_codes import *
+from django.http import HttpResponse, HttpResponseServerError
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.sessions.models import Session
+from django.contrib.auth.decorators import login_required
+import redis
 
 class UserPermissionsObj(permissions.BasePermission):
 
@@ -33,48 +38,6 @@ class LargeResultsSetPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 10000
 
-# class AdminPanelViewSet(viewsets.ReadOnlyModelViewSet):
-#     authentication_classes = (TokenAuthentication,)
-#     # permission_classes = (IsAdminUser)
-#     queryset = User.objects.filter(is_superuser=True)
-#     serializer_class = AdminPanelSerializer
-#
-#     @detail_route(methods=["GET", "POST"])
-#     def delete_user(self, request, pk=None):
-#
-#         try:
-#             user = User.objects.get(pk=pk)
-#             if user.is_superuser == True:
-#                 return Response("User Is Admin So Cannot Be Deleted", status=status.HTTP_406_NOT_ACCEPTABLE)
-#             else:
-#                 user.delete()
-#                 return Response("user  deleted", status=status.HTTP_200_OK)
-#         except User.DoesNotExist:
-#             raise Http404("No User matches the given query.")
-#
-#
-#     @detail_route(methods=["GET", "POST"])
-#     def delete_project(self, request, pk=None):
-#         try:
-#             project = Project.objects.get(pk=pk)
-#             project.delete()
-#             return Response("Project deleted", status=status.HTTP_200_OK)
-#
-#         except Project.DoesNotExist:
-#             raise Http404("No Project matches the given query.")
-#
-#
-#     @detail_route(methods=["GET", "POST"])
-#     def delete_to_do_list(self, request, pk=None):
-#         try:
-#             to_do_list = To_do_list.objects.filter(user_id=1).filter(id=pk)
-#             to_do_list.delete()
-#             data = To_do_list.objects.filter(user_id=1)
-#             serializers=To_do_listSerializer(data,many=True)
-#             return Response(serializers.data,status=status.HTTP_200_OK)
-#
-#         except Project.DoesNotExist:
-#             raise Http404("No to_do_list matches the given query.")
 
 class SupporterPanelViewSet(viewsets.ReadOnlyModelViewSet):
     # authentication_classes = (TokenAuthentication,)
@@ -171,7 +134,10 @@ class AddConsultantViewSet(viewsets.ModelViewSet):
             # new_dict.update({'resume_name':os.path.basename(serializer.data['resume'])})
             return Response({'message':'success'})
         else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            if  str(serializer.errors).find("This field may not be blank."):
+                return Response(HTTP_USER_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class AddSupporterViewSet(viewsets.ModelViewSet):
@@ -191,13 +157,20 @@ class AddSupporterViewSet(viewsets.ModelViewSet):
     #     return Response({'token': token.key, 'id': user.id}, status=status.HTTP_201_CREATED, headers=headers)
 
     def create(self, request,):
-        serializer = CreateSupporterSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
+            if request.data['username'] == '' and request.data['email'] == '':
+                return Response(HTTP_DATA_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
+            elif request.data['username']=='':
+                return Response(HTTP_USER_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
+            elif request.data['email'] == '':
+                return Response(HTTP_EMAIL_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                serializer = CreateSupporterSerializer(data=request.data)
 
-            return Response({'status': 'Success'})
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                if serializer.is_valid():
+                    serializer.save()
+                    return Response({'status': 'Success'})
+                else:
+                     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class AddProjectViewSet(viewsets.ModelViewSet):
@@ -210,12 +183,24 @@ class AddProjectViewSet(viewsets.ModelViewSet):
     filter_fields = ('title',)
 
     def create(self, request):
-        serializer = CreateProjectSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({'status': 'Success'})
+        project= Project.objects.filter(title=request.data['title'])
+        if project.exists():
+            return Response(HTTP_TITLE_NOT_VALID,status=status.HTTP_400_BAD_REQUEST)
         else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            serializer = CreateProjectSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                # user = User.objects.get(username='amrit')
+                # r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
+                # pool = redis.ConnectionPool(host='localhost', port=6379, db=0)
+                # r = redis.Redis(connection_pool=pool)
+
+                # r.publish('chat', user.username + ': ' + "hi")
+                # print("**********************",r)
+                return Response({'status': 'Success'})
+            else:
+                return Response(HTTP_DATA_NOT_VALID,status=status.HTTP_400_BAD_REQUEST)
 
     @detail_route(methods=['GET', 'POST'])
     def get_comments(self, request, pk=None):
@@ -241,8 +226,11 @@ class SupporterDetailViewset(viewsets.ModelViewSet):
             text = (request.POST['search'])
             filtered_supporter = User.objects.filter(role="supporter").filter(
                 skillset__technology__technology__icontains=text).distinct()
-            serializer = SkillSerializer(filtered_supporter, many=True)
-            return Response({"results": serializer.data, "count": filtered_supporter.count()})
+            if filtered_supporter:
+                serializer = SkillSerializer(filtered_supporter, many=True)
+                return Response({"results": serializer.data, "count": filtered_supporter.count()})
+            else:
+                return Response(HTTP_USER_NOT_FOUND, status=status.HTTP_404_NOT_FOUND)
         else:
             return Response(status=404)
 
@@ -272,6 +260,12 @@ class RegisterViewSet(viewsets.ModelViewSet):
     #     return Response({'token': token.key, 'id': user.id}, status=status.HTTP_201_CREATED, headers=headers)
 
     def create(self,request):
+        if request.data['username'] == '' and request.data['email'] == '':
+            return Response(HTTP_DATA_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
+        elif request.data['username'] == '':
+            return Response(HTTP_USER_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
+        elif request.data['email'] == '':
+            return Response(HTTP_EMAIL_CANT_BE_BLANK, status=status.HTTP_400_BAD_REQUEST)
         serializer=RegistrationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -372,21 +366,24 @@ class To_do_listViewSet(viewsets.ModelViewSet):
     queryset= To_do_list.objects.all()
     serializer_class = To_do_listSerializer
 
-    # @detail_route(methods=['GET','POST'])
-    # def get_list(self,request,pk=None):
-    #     data=To_do_list.objects.filter(user=pk)
-    #     serializers=To_do_listSerializer(data,many=True)
-    #     return Response(serializers.data)
+class HistoryViewset(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = HistorySerializer
 
+    @detail_route(methods=["GET", "POST"])
+    def history(self,request,pk=None):
 
+        final_list=[]
+        User.objects.filter(id=pk)
+        his=User.history.filter(id=pk)
+        # User.role=='supporter'
+        var1=User.objects.filter(id=pk)
+        var3=User.objects.filter(id=pk)
 
+        var2=Project.history.filter(consultant_id=pk)
+        var4=Projec1Serializer(var2,many=True)
+        hi=HistorySerializer(his,many=True)
+        final_list.append(hi.data)
+        final_list.append(var4.data)
 
-# # class LoginViewCustom(LoginView):
-#         authentication_classes = (TokenAuthentication,)
-# class UserViewSet(viewsets.ModelViewSet):
-#     permission_classes = (IsAuthenticated,)
-#     authentication_classes = (TokenAuthentication,)
-#     def list(self, request):
-#         data=User.objects.get(username=request.auth.user.username)
-#         serializers=UserSerializer(data)
-#         return Response(serializers.data)
+        return Response(final_list)
