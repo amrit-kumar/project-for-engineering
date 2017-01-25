@@ -19,7 +19,7 @@ import json
 from .views import *
 from .models import *
 
-
+from consultant_app.consumers import *
 
 
 # @receiver(post_save, sender=Project)
@@ -131,28 +131,24 @@ def comment_recieved(sender,created,**kwargs):
                 send_by=obj.supporter,
                 text= "%s has commented on %s" % (obj.supporter, obj.project)
             )
+
             return None
         else:
             if obj.project.consultant.supporter != obj.supporter:
                 print("22222222222222222")
                 recipient1 = User.objects.get(is_superuser=True)
-                Notification.objects.create(
+                hi=Notification.objects.create(
                     recipient=recipient1,
                     comment=obj,
                     project=obj.project,
                     type="commented",
                     send_by=obj.supporter,
                     text="%s has commented on %s" % (obj.supporter, obj.project))
-                print("ttttttttttttttttttttttt")
-                #
-                # for reply_channel in redis_conn.smembers("readers"):
-                #     print("signals reply channel1111",reply_channel)
-                #     Channel(reply_channel).send({
-                #         "text": json.dumps({
-                #             "content": "channel running"
-                #         })
+                serializers = Nserializer(hi)
+                info = serializers.data
+                Channel('repeat-me').send({'info': info, 'status': True})
 
-                    # })
+
 
                 recipient2 = User.objects.get(username=obj.project.consultant.supporter.username)
                 if recipient1 !=recipient2:

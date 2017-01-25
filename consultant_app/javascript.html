@@ -24,22 +24,27 @@
 
 //socket = new WebSocket("ws://" + window.location.host + "/chat/");
 //var socket = io.connect('http://192.168.1.33:8000');
-socket = new WebSocket("ws://192.168.1.33:8000/");
-    //console.log("requestttttttttttt",message.session.session_key)
+    // Create a new WebSocket
+socket = new WebSocket("ws://192.168.1.33:8000/chat/" );
 
+
+
+    console.log("OOOOOOOOOOOOOOOOO",window.location.host)
+    //console.log("oooooooooooooooooobbbbbbbbbjjjjjjjjj",socket)
+    //console.log("requestttttttttttt",message.session.session_key)
+    // Make it show an alert when a message is received
     socket.onmessage = function(e)
     {
         console.log(e,"e")
         alert(e.data);
     };
-
+    // Send a new message when the WebSocket opens
     socket.onopen = function(value) {
         console.log("open")
         socket.send(value);
     };
 // Call onopen directly if socket is already open
 //if (socket.readyState == WebSocket.OPEN)
-          //console.log("script ke andar 33333")
 
 function sendMessage() {
              var v= document.getElementById("input")

@@ -25,7 +25,7 @@ SECRET_KEY = '!y75(+yutnyg&36(!s%u@hu9h-k&bmj9(&h1sq+e7y=e41bae9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.1.33"]
 # ALLOWED_HOSTS = ['*']
 
 
@@ -128,6 +128,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
+    # 'channels_panel.panel.ChannelsDebugPanel',
 
 ]
 
@@ -144,13 +145,13 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.core.context_processors.static',
+                # 'django.core.context_processors.static',
                 'ws4redis.context_processors.default',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                "django.core.context_processors.request",
+                # "django.core.context_processors.request",
 
                 # "allauth.account.context_processors.account",
                 # "allauth.socialaccount.context_processors.socialaccount",

@@ -38,6 +38,8 @@ router.register(r'notification', NotificationViewSet, 'notification')
 router.register(r'technology', TechnologyViewSet, 'technology')
 router.register(r'to_do_list', To_do_listViewSet, 'to_do_list')
 router.register(r'comment', CommentViewSet, 'comment')
+router.register(r'global_search', GlobalSearchViewset, 'global_search')
+
 
 
 
@@ -52,5 +54,5 @@ urlpatterns = [
     url(r'all_auth/', include('allauth.urls')),
     url(r'^', include('django.contrib.auth.urls')),
 
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

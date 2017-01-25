@@ -25,6 +25,14 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.sessions.models import Session
 from django.contrib.auth.decorators import login_required
 import redis
+from rest_framework.views import APIView
+from rest_framework import generics
+from django.db.models import Q
+from functools import reduce
+
+
+
+
 
 class UserPermissionsObj(permissions.BasePermission):
 
@@ -207,6 +215,10 @@ class AddProjectViewSet(viewsets.ModelViewSet):
         data = Project.objects.get(id=pk)
         serializers = ProjectInfoSerializer(data)
         data=serializers.data
+        info=str(serializers.data)
+        print("**********************",info)
+
+        Channel('repeat-me').send({'info': info, 'status': True})
         return Response(data)
 
 class SupporterDetailViewset(viewsets.ModelViewSet):
@@ -387,3 +399,46 @@ class HistoryViewset(viewsets.ModelViewSet):
         final_list.append(var4.data)
 
         return Response(final_list)
+
+class GlobalSearchViewset(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = GlobalSearchSerializer
+    print("((((((((((((((((((((")
+
+    @list_route(methods=["POST"])
+    def filter_by_any(self, request):
+       if request.method == 'POST':
+          query = (request.POST['query'])
+          # query = (request.POST['search'])
+          # query = self.request.query_params.get('query',None)
+          snippets = User.objects.filter(username__icontains=query)
+          print("********************",snippets)
+          tech = User.objects.filter(skype_username__icontains=query)
+          print("+++++++++++++",tech)
+          # all_results.sort(key=lambda x: x.created)
+          filtered_supporter = User.objects.filter(role="supporter").filter(
+              skillset__technology__technology__icontains=query).distinct()
+          # tech=Technology.objects.filter()
+          pro=Project.objects.filter(title__icontains=query)
+          print("rpoject",pro)
+          var2=ProjectSerializer(pro,many=True)
+          var2=var2.data
+          serializ = GlobalSearchSerializer(snippets, many=True)
+          serializ=serializ.data
+          serializ1 = GlobalSearchSerializer(tech, many=True)
+          serializ1=serializ1.data
+          serializ2 = GlobalSearchSerializer(filtered_supporter, many=True)
+          serializ2=serializ2.data
+
+          all_results = list(chain(serializ, serializ1,serializ2,var2))
+          unique = reduce(lambda l, x: l + [x] if x not in l else l, all_results, [])
+          #to make the list of unique elements
+          #or to make unique we can use Q objects in django
+
+          # s = set(val for dic in all_results for val in dic.values())
+          print("TTTTTTTTTTTTTTTTTTT",type(unique))
+          print("&&&&&&&&&&&&&&&&&",unique)
+          # var = serializ.data
+
+
+          return Response(unique)
