@@ -16,14 +16,14 @@
       <database id="3" name="tixdo_bookkeeper">
         <object-id>17620</object-id>
       </database>
-      <database id="4" name="tixdo">
-        <object-id>18034</object-id>
-      </database>
-      <database id="5" name="tixdo_events">
+      <database id="4" name="tixdo_events">
         <object-id>26222</object-id>
       </database>
-      <database id="6" name="ckiller">
+      <database id="5" name="ckiller">
         <object-id>47676</object-id>
+      </database>
+      <database id="6" name="tixdo">
+        <object-id>119179</object-id>
       </database>
       <schema id="7" parent="1" name="public">
         <object-id>2200</object-id>

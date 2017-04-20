@@ -29,6 +29,9 @@ from rest_framework.views import APIView
 from rest_framework import generics
 from django.db.models import Q
 from functools import reduce
+import barcode
+from barcode.writer import ImageWriter
+import pyqrcode
 
 
 

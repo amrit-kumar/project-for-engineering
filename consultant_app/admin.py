@@ -3,6 +3,7 @@ from .models import *
 from versatileimagefield.registry import versatileimagefield_registry
 from versatileimagefield.fields import VersatileImageField
 from .versatilimagefield import *
+from django.contrib import auth
 
 class UserAdmin(admin.ModelAdmin):
     def render_change_form(self, request, context, *args, **kwargs):

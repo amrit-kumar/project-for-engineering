@@ -19,6 +19,8 @@ import ast
 from django.utils.encoding import force_text
 from django.core.cache import cache
 from consultant_app.models import User
+from http.cookies import SimpleCookie as cookie
+
 
 
 
@@ -40,20 +42,33 @@ redis_conn = redis.Redis("localhost", port=6379)
 
 
 # @receiver(post_save, sender= Comment,**kwargs)
+# @channel_session
+#
 @channel_session_user_from_http
 def ws_connect(message):
-    print("ccccccccccccccccccccccc",message.content['headers'],"user is..",message.channel_session.__dict__['_session_cache']['_auth_user_id'])
+    print("ccccccccccccccccccccccc ",message.content)
+    # print("sessioniddddddddddd",message.content['headers'][0][1],"user is..",message.channel_session.__dict__['_session_cache']['_auth_user_id'])
+    # cookiestring = "\n".join(message.headers.get_all('Cookie', failobj=[]))
+    # c = cookie()
+    # c.load(cookiestring)
     # n=Notification.objects.filter(unread=True)
     # serializers=Nserializer(n,many=True)
+
     message.reply_channel.send({"accept": True})
     room = message.content['path'].strip("/")
     message.channel_session['room'] = room
     Group("chat-%s" % room).add(message.reply_channel)
 
-    session = cache.get('sessionid')
-    data = session.get_decoded()
-    uid = data.get('_auth_user_id', None)
-    user = User.objects.get(id=uid)
+    # session = cache.get('sessionid')
+    # s = message.Session()
+    # c=s.cookies
+    # print("CCCCCCCCCCCCc",c)
+
+
+    # session='3hqb6wlupk9361ajmv6e3fh8atp4bwdm'
+    # data = session.get_decoded()
+    # uid = data.get('_auth_user_id', None)
+    # user = User.objects.get(id=uid)
     # Group("chat-%s" % message.user.username).add(message.reply_channel)
 
     # for i in serializers.data:
@@ -62,19 +77,19 @@ def ws_connect(message):
         # "text": str(serializers.data)
         # })
 
-@channel_session_user
-# @channel_session
+# @channel_session_user
+@channel_session
 def ws_message(message):
     # user=User.objects.get(id=16)
     # try:
         print("rrrrrrrrrrrrrrrrrrrrrr",message.content)
         print("TEXT IN SEND ",message.content['text'])
         data1=message.content['text']
-        var1=json.loads(data1)
+        # var1=json.loads(data1)
 
-        print("!!!!!!!!!!!!!!!!!!!!!!!",var1,"|||||||||||||||||",type(var1))
+        # print("!!!!!!!!!!!!!!!!!!!!!!!",var1,"|||||||||||||||||",type(var1))
         # comment=ast.literal_eval(message.content['text'])
-        print("project%%",var1['project'],"supporter%%",var1['supporter'])
+        # print("project%%",var1['project'],"supporter%%",var1['supporter'])
         project=Project.objects.get(id=53)
         user=User.objects.get(id=16)
 

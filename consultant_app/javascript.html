@@ -25,7 +25,7 @@
 //socket = new WebSocket("ws://" + window.location.host + "/chat/");
 //var socket = io.connect('http://192.168.1.33:8000');
     // Create a new WebSocket
-socket = new WebSocket("ws://192.168.1.33:8000/chat/" );
+socket = new WebSocket('ws://192.168.2.24:8000/chat/');
 
 
 
@@ -48,7 +48,7 @@ socket = new WebSocket("ws://192.168.1.33:8000/chat/" );
 
 function sendMessage() {
              var v= document.getElementById("input")
-              console.log(v.value,'asdiugasdjbjhsad')
+             console.log(v.value,'asdiugasdjbjhsad')
     if (socket.readyState == WebSocket.OPEN) socket.onopen(v.value);
 
 

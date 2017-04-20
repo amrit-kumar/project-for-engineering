@@ -25,8 +25,8 @@ SECRET_KEY = '!y75(+yutnyg&36(!s%u@hu9h-k&bmj9(&h1sq+e7y=e41bae9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.1.33"]
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ["192.168.1.33"]
+ALLOWED_HOSTS = [ ]
 
 
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'ws4redis',
     'simple_history',
     'channels',
+    # 'django-celery',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -86,12 +87,12 @@ INSTALLED_APPS = [
 #         "ROUTING": "consultad.routing.channel_routing",
 #     },
 # }
-REDIS_HOST= '192.168.1.33'
+REDIS_HOST= '192.168.2.24'
 REDIS_PORT= 6379
 REDIS_SERVER_CONF = {
     'servers' : {
       'main_server': {
-        'HOST' : '192.168.1.33',
+        'HOST' : '192.168.2.24',
         'PORT' : 6379 ,
         'DATABASE':0
     }
@@ -102,7 +103,7 @@ CHANNEL_LAYERS = {
         "BACKEND": "asgi_redis.RedisChannelLayer",
         "CONFIG": {
             # "hosts": [("192.168.1.33", 6379)],
-            "hosts": [os.environ.get('REDIS_URL', '192.168.1.33:6379')],
+            "hosts": [os.environ.get('REDIS_URL', '192.168.2.24:6379')],
 
         },
         "ROUTING": "consultad.routing.channel_routing",

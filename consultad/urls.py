@@ -20,6 +20,7 @@ from consultant_app.views import *
 from django.conf.urls.static import static
 from rest_framework.authtoken import views
 from django.views.decorators.csrf import csrf_exempt
+from django.core.urlresolvers import reverse
 
 
 
