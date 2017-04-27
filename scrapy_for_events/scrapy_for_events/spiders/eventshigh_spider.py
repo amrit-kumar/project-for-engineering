@@ -32,21 +32,6 @@ class QuotesSpider(scrapy.Spider):
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse_duration)
 
-    # def parse(self, response):
-    #     print("111111111111111111",response.url)
-    #     var4=''
-    #     if 'Chennai' in response.url:
-    #         var4=response.xpath('//ul[@id="myTab"]//a/@href').extract()
-    #     else:
-    #         var1=response.css('div.explore-tab')
-    #         var4=var1.css('a::attr(href)').extract()
-    #
-    #     for i in var4:
-    #         url=response.url + i
-    #         print("33333333333333333",url)
-    #         print("4444444444444444",scrapy.Request(url=response.url,callback=self.parse_duration))
-    #         yield scrapy.Request(url=url,callback=self.parse_duration)
-
 
     def parse_duration(self, response):
         var1=response.css('div.margin-top15')
@@ -85,7 +70,7 @@ class QuotesSpider(scrapy.Spider):
         for i in var:
 
             event_name=i.css('h3::text').extract()
-            price=(i.css('div.browse-price-wrp::text').extract())
+            price=i.css('div.browse-price-wrp::text').extract()
             # print("&&&&&&&&&&&&&&&&&&&&&",price)
 
             with open(filename, 'a') as f:
