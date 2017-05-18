@@ -406,7 +406,6 @@ class HistoryViewset(viewsets.ModelViewSet):
 class GlobalSearchViewset(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = GlobalSearchSerializer
-    print("((((((((((((((((((((")
 
     @list_route(methods=["POST"])
     def filter_by_any(self, request):

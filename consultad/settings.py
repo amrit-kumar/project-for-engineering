@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import django
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -21,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '!y75(+yutnyg&36(!s%u@hu9h-k&bmj9(&h1sq+e7y=e41bae9'
-
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "consultad.settings")
+# django.setup()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -50,14 +53,18 @@ INSTALLED_APPS = [
     'ws4redis',
     'simple_history',
     'channels',
-    # 'django-celery',
 
+    # 'django-celery',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'scrapy',
+    'scrapy_for_events',
+    'scrapy_djangoitem',
 ]
 
 # WEBSOCKET_URL = '/ws/'
@@ -111,11 +118,7 @@ CHANNEL_LAYERS = {
 }
 
 
-
-
-
-
-SITE_ID = 2
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
     'corsheaders.middleware.CorsMiddleware',
@@ -153,7 +156,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # "django.core.context_processors.request",
-
                 # "allauth.account.context_processors.account",
                 # "allauth.socialaccount.context_processors.socialaccount",
 
@@ -186,9 +188,9 @@ LOGIN_REDIRECT_URL = "/"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'consultad_db',
+        'NAME': 'my_project',  #consultad_db
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'consultadd',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

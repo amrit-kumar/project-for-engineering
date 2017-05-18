@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2038839287">
-    <data-source source="LOCAL" name="PostgreSQL - consultad_db@localhost" uuid="ef31da73-d0eb-4515-ac38-81b0bd8dc522">
+  <component name="DataSourceManagerImpl" format="xml" hash="2904515321">
+    <data-source source="LOCAL" name="PostgreSQL - my_project@localhost" uuid="406e0af1-afb1-479b-a55a-50c19df8b8d5">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/consultad_db</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/my_project</jdbc-url>
     </data-source>
   </component>
 </project>

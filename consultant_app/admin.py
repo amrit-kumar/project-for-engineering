@@ -45,6 +45,13 @@ admin.site.register(Comment,CommentAdmin)
 admin.site.register(Technology)
 admin.site.register(SkillSet,SkillsetAdmin)
 
+admin.site.register(Eventshigh)
+admin.site.register(Goeventz)
+admin.site.register(Bookmyshow)
+admin.site.register(Meraevents)
+admin.site.register(Insider)
+
+
 
 
 

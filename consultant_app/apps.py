@@ -6,8 +6,8 @@ from django.utils.translation import ugettext_lazy as _
 class ConsultantAppConfig(AppConfig):
     name = 'consultant_app'
 
-    def ready(self):
-        import consultant_app.signals
+    # def ready(self):
+    #     import consultant_app.signals
 
 
 # class ProfilesConfig(AppConfig):
