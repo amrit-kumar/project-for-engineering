@@ -36,7 +36,6 @@ class SkillsetAdmin(admin.ModelAdmin):
          context['adminform'].form.fields['supporter'].queryset = User.objects.filter(role='supporter')
          return super(SkillsetAdmin, self).render_change_form(request, context, args, kwargs)
 
-
 admin.site.register(User, UserAdmin)
 admin.site.register(Project,ProjectAdmin)
 admin.site.register(To_do_list,To_do_listAdmin)
@@ -45,11 +44,25 @@ admin.site.register(Comment,CommentAdmin)
 admin.site.register(Technology)
 admin.site.register(SkillSet,SkillsetAdmin)
 
-admin.site.register(Eventshigh)
-admin.site.register(Goeventz)
-admin.site.register(Bookmyshow)
-admin.site.register(Meraevents)
-admin.site.register(Insider)
+
+def delete_all(modeladmin, request, queryset):
+    Bookmyshow.objects.all().delete()
+    print("ddddddddddddddddddddddddddddddddddddddddddddd")
+
+
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ['event_name', 'date_time','price_data','venue']
+    # list_display = ['event_url',]
+    ordering = ['event_name']
+    search_fields = ('event_name',)
+    actions = [delete_all]
+
+
+admin.site.register(Eventshigh,ArticleAdmin)
+admin.site.register(Goeventz,ArticleAdmin)
+admin.site.register(Bookmyshow,ArticleAdmin)
+admin.site.register(Meraevents,ArticleAdmin)
+admin.site.register(Insider,ArticleAdmin)
 
 
 
