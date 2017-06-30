@@ -21,9 +21,14 @@ class To_do_listAdmin(admin.ModelAdmin):
          return super(To_do_listAdmin, self).render_change_form(request, context, args, kwargs)
 
 class NotificationAdmin(admin.ModelAdmin):
-    def render_change_form(self, request, context, *args, **kwargs):
-         context['adminform'].form.fields['recipient'].queryset = User.objects.filter(role='supporter')
-         return super(NotificationAdmin, self).render_change_form(request, context, args, kwargs)
+    # list_display = ['recipient']
+    list_display = ('get_author',)
+
+    def get_author(self, obj):
+        return obj.recipient.gender
+    # def render_change_form(self, request, context, *args, **kwargs):
+    #      context['adminform'].form.fields['recipient'].queryset = User.objects.filter(role='supporter')
+    #      return super(NotificationAdmin, self).render_change_form(request, context, args, kwargs)
 
 class CommentAdmin(admin.ModelAdmin):
     def render_change_form(self, request, context, *args, **kwargs):
@@ -46,7 +51,7 @@ admin.site.register(SkillSet,SkillsetAdmin)
 
 
 def delete_all(modeladmin, request, queryset):
-    Bookmyshow.objects.all().delete()
+    Eventshigh.objects.all().delete()
     print("ddddddddddddddddddddddddddddddddddddddddddddd")
 
 

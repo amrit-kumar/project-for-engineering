@@ -31,8 +31,6 @@ DEBUG = True
 # ALLOWED_HOSTS = ["192.168.1.33"]
 ALLOWED_HOSTS = [ ]
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -62,6 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'djcelery',
     'scrapy',
     'scrapy_for_events',
     'scrapy_djangoitem',
@@ -244,6 +243,11 @@ OAUTH2_PROVIDER = {
 }
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
+BROKER_URL = "amqp://myuser:mypassword@localhost:5672/myvhost"
+CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'utkarshsharma.tixdo@gmail.com'

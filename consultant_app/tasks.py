@@ -1,13 +1,22 @@
+from __future__ import absolute_import, unicode_literals
+# from .celery import app
+from celery import Celery, task,shared_task
+import os
 
-from __future__ import absolute_import
+# from celery.task.schedules import crontab
+# from celery.decorators import periodic_task
 
-from celery import shared_task,task
-from .models import *
 
+os.environ[ 'DJANGO_SETTINGS_MODULE' ] = "proj.settings"
+
+
+app = Celery('tasks', broker='pyamqp://guest@localhost//')
+
+# @app.task
 @shared_task
-def test(param):
-    return 'The test task executed with argument "%s" ' % param
+def add(x, y):
+    print("##################################################")
+    return x + y
 
-@task
-def create_user(username, password):
-    User.objects.create(username=username, password=password)
+# @periodic_task(run_every=(crontab(minute='*/15')), name="some_task", ignore_result=True)
+# def some_task()
